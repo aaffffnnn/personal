@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>HabibiQalbi Photo Organizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>emailjs.init('irp_f-Y3iAHaHJ4ya');</script>
+</head>
+<body>
+  <!-- Mood Switcher -->
+  <div class="mood-icon-switcher" id="moodIconSwitcher">
+    <button class="mood-btn mood-love"  title="Pastel Love"><span>❤️</span></button>
+    <button class="mood-btn mood-night" title="Cozy Night"><span>🌙</span></button>
+    <button class="mood-btn mood-sunny" title="Sunny Mood"><span>🌞</span></button>
+  </div>
+
+  <!-- Floating hearts background -->
+  <div class="floating-hearts-bg">
+    <div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div>
+    <div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div>
+ 
+      
+  </div>
+  <div class="flowy-bg">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+  </div>
+  <div class="header">HabibiQalbi</div>
+
+  <!-- Photos Page -->
+  <section id="page-home" class="page-section">
+    <div class="controls">
+      <label class="pill" for="photo-upload">📸 Upload
+        <input type="file" id="photo-upload" accept="image/*" multiple hidden />
+      </label>
+      <button id="like-filter-btn" class="pill" title="Show liked photos only">❤️</button>
+      <button id="send-msg-btn" class="pill" title="Send a love note">💌</button>
+    </div>
+    <button id="back-arrow" class="back-arrow hide" title="Back">←</button>
+    <div id="folders" class="folders"></div>
+    <div id="photos" class="photos"></div>
+    <div id="empty" class="empty-state hide">
+      <div class="empty-emoji">🌈</div>
+      <div>No memories yet! Tap <b>+</b> to add your first photo.</div>
+    </div>
+    <button id="fab-folder" class="fab" title="Create Folder">+</button>
+  </section>
+ <!-- Coming soon placeholders -->
+    <section id="page-voice" class="page-section" style="display:none;">
+    <div class="page-placeholder"><h2>🎤 Voice Notes</h2><p>Coming soon...</p></div>
+  </section>
+
+
+  <section id="page-chat" class="page-section">
+    <div class="chat-container">
+      <div class="chat-header">💕  Chat</div>
+      <div class="chat-messages" id="chat-messages"></div>
+      <form class="chat-input-bar" id="chat-form" autocomplete="off">
+        <input type="text" id="chat-input" placeholder="Send a cute message…" maxlength="200" autocomplete="off" />
+        <button type="submit">💌</button>
+      </form>
+    </div>
+  </section>
+  
+  <section id="page-calendar" class="page-section">
+  <div class="calendar-container">
+    <div id="calendar"></div>
+  </div>
+  <div class="calendar-memories" id="calendar-memories"></div>
+  
+  <!-- Cute popup for calendar note -->
+  <div id="calendar-note-modal" class="cal-modal hide">
+    <div class="cal-modal-content">
+      <span class="cal-modal-close" id="close-cal-modal">&times;</span>
+      <div class="cal-modal-label" id="cal-modal-label"></div>
+      <textarea id="cal-modal-text" maxlength="220" placeholder="Write your sweet memory..."></textarea>
+      <button id="save-cal-modal" class="cal-modal-save">Save</button>
+    </div>
+  </div>
+</section>
+
+  
+  
+  
+  
+
+  <!-- Bottom Tab Bar -->
+  <nav class="floating-tab-bar" id="mainNav">
+    <button class="tab-btn tab-home selected" title="Home"><span>📸</span></button>
+    <button class="tab-btn tab-voice" title="Voice"><span>🎤</span></button>
+    <button class="tab-btn tab-chat" title="Chat"><span>💬</span></button>
+    <button class="tab-btn tab-calendar" title="Calendar"><span>📅</span></button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
