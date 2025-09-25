@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <form id="loveForm">
                 <select id="to">
                   <option value="affannawaz4477@gmail.com">📨 to Gehad</option>
-                  <option value="iqrajaanchoudhary@example.com">💌 to Gundi</option>
+                  <option value="iqrajaanchoudhary@gmail.com">💌 to Gundi</option>
                 </select>
                 <input type="text" id="yourName" placeholder="Apna pyara naam likho">
                 <input type="email" id="yourEmail" placeholder="Email id bhi likhdo zara si">
@@ -734,3 +734,4 @@ backBtn.onclick = () => {
     drawPhotos();
 }
   }
+
